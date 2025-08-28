@@ -16,12 +16,6 @@ All experimental results—including training curves, prototype visualizations, 
 
 **`results_demonstration.ipynb`**
 
-All experimental results—including training curves, prototype visualizations, and analysis—are documented in the Jupyter notebook:
-
-**`results_demonstration.ipynb`**
-
-See that notebook for comprehensive visualizations and performance insights.
-
 # Prerequisites
 
 PyTorch, NumPy, cv2, Augmentor (https://github.com/mdbloice/Augmentor)
