@@ -22,8 +22,6 @@ All experimental results—including training curves, prototype visualizations, 
 
 See that notebook for comprehensive visualizations and performance insights.
 
----
-
 # Prerequisites
 
 PyTorch, NumPy, cv2, Augmentor (https://github.com/mdbloice/Augmentor)
