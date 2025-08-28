@@ -1,0 +1,8 @@
+# Pyhton cache files
+__pycache__/
+
+datasets/
+local_analysis/
+saved_models/
+
+*pth

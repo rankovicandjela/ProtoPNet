@@ -72,7 +72,8 @@ log('load model from ' + load_model_path)
 log('model base architecture: ' + model_base_architecture)
 log('experiment run: ' + experiment_run)
 
-ppnet = torch.load(load_model_path)
+torch.serialization.add_safe_globals([model.PPNet])
+ppnet = torch.load(load_model_path, weights_only=False)
 ppnet = ppnet.cuda()
 ppnet_multi = torch.nn.DataParallel(ppnet)
 
@@ -270,7 +271,7 @@ for i in range(1,11):
     log('--------------------------------------------------------------')
 
 ##### PROTOTYPES FROM TOP-k CLASSES
-k = 50
+k = 5
 log('Prototypes from top-%d classes:' % k)
 topk_logits, topk_classes = torch.topk(logits[idx], k=k)
 for i,c in enumerate(topk_classes.detach().cpu().numpy()):

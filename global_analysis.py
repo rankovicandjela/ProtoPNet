@@ -38,7 +38,8 @@ start_epoch_number = int(epoch_number_str)
 
 # load the model
 print('load model from ' + load_model_path)
-ppnet = torch.load(load_model_path)
+torch.serialization.add_safe_globals([model.PPNet])
+ppnet = torch.load(load_model_path, weights_only=False)
 ppnet = ppnet.cuda()
 ppnet_multi = torch.nn.DataParallel(ppnet)
 
